@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>React Test</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wdd430</title>
   </head>
   <body>
-    <div id="app"></div>
-
-    <!-- React -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <!-- Babel -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/babel">
-      function Header({ title }) {
-        return <h1>{title}</h1>;
-      }
-
-      function HomePage() {
-        const [likes, setLikes] = React.useState(0);
-
-        function handleClick() {
-          setLikes(likes + 1);
-        }
-
-        return (
-          <div>
-            {/* ... */}
-            <button onClick={handleClick}>Likes ({likes})</button>
-          </div>
-        );
-      }
-
-      const app = document.getElementById('app');
-      const root = ReactDOM.createRoot(app);
-      root.render(<HomePage />);
-    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
